@@ -1,0 +1,46 @@
+<% include ./partials/header %>
+
+<style>
+	body{
+	background:url(https://images.unsplash.com/photo-1441034281545-78296c3a6934?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+    background-size: cover;
+	background-repeat:no-repeat;
+    background-position: center;
+    
+}
+	#edit{
+		margin-top:40px;
+	}
+	
+</style>
+
+<div class="container" id="edit">
+    <div class="row">
+		<div class="container">
+          <h1 style="text-align: center">Edit <span style="color:#cb2d6f"><%=blog.title%></span> </h1>
+			<hr style="width:30%">
+		</div>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/blogs/<%=blog._id%>?_method=PUT" method="POST">
+                <div class="form-group">
+                	<label>Title</label>
+                    <input class="form-control" type="text" name ="blog[title]" value="<%=blog.title%>" autofocus>
+                </div>
+                <div class="form-group">
+                    <label>Image</label>
+                    <input class="form-control" type="text" name="blog[image]" value="<%=blog.image%>">
+                </div>
+                <div class="form-group">
+                	<label>Blog Content</label>
+                    <textarea class="form-control" name="blog[body]" rows="4" cols="50"><%=blog.body%></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-outline-success btn-block" type="submit">Post Blog</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>

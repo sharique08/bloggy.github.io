@@ -1,0 +1,56 @@
+<% include ./partials/header %>
+
+<style>
+	 body {
+            background:url(https://images.unsplash.com/photo-1559291001-693fb9166cba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80);
+            background-size: cover;
+	        background-repeat:no-repeat;
+            background-position: center;
+
+             }
+	.jumbotron{
+		background-color:#687864;
+	}
+	
+	#date{
+		 color: #cb2d6f;
+	}
+</style>
+
+<!--<div class="container">-->
+
+ <div class="jumbotron">
+   <h1 class="display-4" style="color:#fff">Welcome To Bloggy!</h1>
+  <!--<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or         information.  </p>-->
+   <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+   <form class="form-inline my-2 my-lg-0" action="/blogs" method="GET">
+      <input class="form-control mr-sm-2" name="search" placeholder="Search Blog" aria-label="Search" style="width:500px; ">
+      <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</div>
+
+	
+<% blogs.forEach(function(blog){ %>
+<div class="container" >
+<p style="text-align: center">
+  <div class="card mb-3" style="width: 70%; margin:0 auto;">
+     <div class="row no-gutters">
+       <div class="col-md-4">
+        <img src="<%= blog.image %>" class="card-img" alt="...">
+       </div>
+       <div class="col-md-8">
+          <div class="card-body">
+	         <h5 class="card-title"><strong><%= blog.title %></strong></h5>
+		     <p class="card-text" ><small  id="date"><strong>- <%= blog.created.toDateString() %></strong> </small>                                          </p>
+             <p class="card-text"><%= blog.body.substring(0,100); %>......</p>
+			 <p><a href="/blogs/<%=blog._id %>" class="btn btn-outline-dark">View Full Post<i class="fas fa-eye"></i></a></p>
+		  </div>
+       </div>
+     </div>
+  </div>
+</p>
+</div>
+<% }); %>
+  
+<% include ./partials/footer %>

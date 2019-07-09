@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<title>Bloggy</title>
+		 <meta charset="utf-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+           <!-- Bootstrap CSS -->
+           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-                ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+		    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	</head>
+	
+	  <style>
+		  body {
+            background-color: #000;
+             }
+		  
+		  #landing-header h1 {
+              color: #fff;
+            }
+		  
+		 #landing-header {
+             z-index: 1;
+             position: relative;
+             text-align: center;
+             padding-top: 40vh;
+        }
+		  
+		  .slideshow { 
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+           }
+		  
+		  .slideshow li { 
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-size: cover;
+              background-position: 50% 50%;
+              background-repeat: no-repeat;
+              opacity: 0;
+              z-index: 0;
+              animation: imageAnimation 20s linear infinite; 
+              }
+		     
+		      .slideshow li:nth-child(1) { 
+               background-image: url(https://images.unsplash.com/photo-1521316973612-36489899f29b?ixlib=rb-  1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+				   
+               }
+               .slideshow li:nth-child(2) { 
+               background-image: url(https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?ixlib=rb-               1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+               animation-delay: 5s; 
+               }
+              .slideshow li:nth-child(3) { 
+               background-image: url(https://images.unsplash.com/photo-1504542227056-9178533a9175?ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80);
+               animation-delay: 10s; 
+               }
+               .slideshow li:nth-child(4) { 
+               background-image: url(https://images.unsplash.com/photo-1452423668729-43a98052d3ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80);
+               animation-delay: 15s; 
+               }
+               .slideshow li:nth-child(5) { 
+                background-image: url(https://images.unsplash.com/photo-1473181488821-2d23949a045a?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+                animation-delay: 20s; 
+               }
+	
+		@keyframes imageAnimation { 
+        0% { 
+        opacity: 0; 
+        animation-timing-function: ease-in;
+        }
+        10% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+        }
+        20% {
+        opacity: 1
+        }
+        30% {
+        opacity: 0
+        }
+       }  
+		 
+		  /* Older browser support - .no-cssanimations class added by modernizr */
+         .no-cssanimations .slideshow li {
+	      opacity: 1;
+          }
+		  
+	  </style>
+	
+	<body>
+		
+		<div class="mx-auto" style="width: 450px; text-align:center; margin-top:-100px" id="landing-header">
+             <h1 class="display-4">Bloggy</h1>
+             <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured                    content or information.  </p>
+			 <hr>
+			 <a class="btn btn-primary btn-lg" href="/blogs">Explore Bloggy<span style="font-size: 25px; margin-left:10px;"><i class="fab fa-wpexplorer">                </i></span></a>
+        </div>
+		
+		<ul class="slideshow">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+       </ul>
+
+		
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-                          q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-      UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>		
+	</body>
+</html>
